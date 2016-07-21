@@ -1,9 +1,18 @@
-// component styles are encapsulated and only applied to their components
-canvas {
-  background-color: white;
-  border: solid 2px black;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
-
+#demoContainer {
+  margin: 1em auto;
   width: 800px;
-  height: 600px;
+
+  canvas {
+    // width: 600px;
+    // height: 600px;
+    display: block;
+    margin: 1em auto;
+    background-color: white;
+    border: solid 2px black;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  form {
+    margin: 1em 4em;
+  }
 }

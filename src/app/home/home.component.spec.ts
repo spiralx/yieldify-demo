@@ -12,12 +12,15 @@ describe('Home', () => {
     addProviders([HomeComponent]);
   });
 
-  it('should log ngOnInit', inject([HomeComponent], (home) => {
-    spyOn(console, 'log');
-    expect(console.log).not.toHaveBeenCalled();
+  it('should set canvas size in ngAfterViewInit', inject([HomeComponent], (home) => {
+    home.ngAfterViewInit();
+    expect(home.canvasSize).toBe(600);
+  }));
 
-    home.ngOnInit();
-    expect(console.log).toHaveBeenCalledWith('Hello Home');
+  it('should set rendering context in ngAfterViewInit', inject([HomeComponent], (home) => {
+    home.ngAfterViewInit();
+    expect(home.context).toBeDefined();
+    expect(home.context instanceof CanvasRenderingContext2D).toBeTruthy();
   }));
 
 });

@@ -1,17 +1,34 @@
-<section>
+<section id="demoContainer">
   <div>
-    <p>
-      <small>{{balls.length}} ball{{balls.length !== 1 ? 's' : ''}}</small>
-    </p>
-    <canvas
-      #demoCanvas
-      width="800" height="600"
-      (click)="clicked($event)"></canvas>
+    <canvas #demoCanvas width="600" height="600" (click)="clicked($event)"></canvas>
   </div>
 
-  <div>
-    Size: <input type="range" min="3" max="10" [(ngModel)]="size">
-    <br />
-    Max. Speed: <input type="range" min="10" max="200" [(ngModel)]="maxSpeed">
-  </div>
+  <form>
+    <div class="form-group row">
+      <label class="col-md-3 form-control-label">Ball size:</label>
+      <div class="col-md-3">
+        <input type="range" class="form-control" min="1" max="10" [(ngModel)]="radius">
+      </div>
+
+      <label class="col-md-3 form-control-label">Average speed:</label>
+      <div class="col-md-3">
+        <input type="range" class="form-control" min="10" max="50" [(ngModel)]="avgSpeed">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-md-3 form-control-label">Maximum balls:</label>
+      <div class="col-md-3">
+        <input type="range" class="form-control" min="6" max="50" [(ngModel)]="maxBalls">
+      </div>
+
+      <div class="col-md-3">
+        <span class="label label-primary">{{space.balls.length}}</span> ball{{space.balls.length !== 1 ? 's' : ''}}
+      </div>
+
+      <div class="col-md-3">
+        <button (click)="reset()" class="btn btn-secondary">Reset</button>
+      </div>
+    </div>
+  </form>
 </section>

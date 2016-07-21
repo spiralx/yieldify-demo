@@ -1,19 +1,23 @@
 // styles in src/style directory are applied to the whole page
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
 
 body {
-    background: #eee;
-    color: #222;
+  background: #eee;
+  color: #222;
 
-    font: 14pt/1.44em 'Open Sans', sans-serif;
+  font: 12pt/1.44em 'Roboto', sans-serif;
 }
 
-section {
+main {
   margin: 1em auto;
   width: 80vw;
+
+  .title {
+    text-align: center;
+  }
 }
 
 a {
-    color: #03A9F4;
+  color: #05f;
 }
