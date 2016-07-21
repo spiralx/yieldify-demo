@@ -25,7 +25,7 @@ export class Space {
   public addBall(x: number, y: number, avgSpeed: number, radius: number) {
     const p = new Point(x / this.size, 1 - y / this.size);
     const v = Velocity.randomVelocity(avgSpeed);
-    
+
     this.balls.push(new Ball(p, v, radius / 100));
   }
 
