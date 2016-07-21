@@ -49,7 +49,8 @@ export class Space {
         `display: inline; background: white; border: none`);
 
       // Apply velocity and gravity.
-      ball.update(deltaT, this.gravity);
+      ball.accelerate(this.gravity);
+      ball.move(deltaT);
 
       ball.dump();
 

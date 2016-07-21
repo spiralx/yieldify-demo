@@ -17,15 +17,18 @@ export class Ball {
     this.colour = randomColour();
   }
 
-  /* Update the ball's current position after deltaT ms have passed. */
-  public update(deltaT: number, gravity: number) {
-    const fac = deltaT / 1000;
-
+  /* Apply gravitational acceleration to downwards velocity. */
+  public accelerate(gravity: number) {
     this.velocity.dy -= gravity * Math.pow(this.position.y, 2);
+  }
+
+  /* Update the ball's current position after deltaT ms have passed. */
+  public move(deltaT: number) {
+    const fac = deltaT / 1000;
 
     const dx = fac * this.velocity.dx;
     const dy = fac * this.velocity.dy;
-    console.log(`dx: ${dx.toFixed(4)}, dy: ${dy.toFixed(4)}, fac: ${fac}, gravity: ${gravity}`);
+    // console.log(`dx: ${dx.toFixed(4)}, dy: ${dy.toFixed(4)}, fac: ${fac}, gravity: ${gravity}`);
 
     this.position.move(dx, dy);
   }
