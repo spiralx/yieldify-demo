@@ -17,7 +17,7 @@ import '../style/app.scss';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  url = 'https://github.com/preboot/angular2-webpack';
+  url = 'https://github.com/spiralx/yieldify-demo';
 
   constructor(private api: ApiService) {
   }

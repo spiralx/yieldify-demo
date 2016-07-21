@@ -1,4 +1,9 @@
 // component styles are encapsulated and only applied to their components
-* {
-  color: #FFEF00;
+canvas {
+  background-color: white;
+  border: solid 2px black;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5);
+
+  width: 800px;
+  height: 600px;
 }

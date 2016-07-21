@@ -1,3 +1,17 @@
-<p>
-  Home Works!
-</p>
+<section>
+  <div>
+    <p>
+      <small>{{balls.length}} ball{{balls.length !== 1 ? 's' : ''}}</small>
+    </p>
+    <canvas
+      #demoCanvas
+      width="800" height="600"
+      (click)="clicked($event)"></canvas>
+  </div>
+
+  <div>
+    Size: <input type="range" min="3" max="10" [(ngModel)]="size">
+    <br />
+    Max. Speed: <input type="range" min="10" max="200" [(ngModel)]="maxSpeed">
+  </div>
+</section>
