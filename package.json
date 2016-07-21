@@ -1,7 +1,16 @@
 {
-  "name": "app",
-  "version": "0.0.0",
+  "name": "yieldify-demo",
+  "version": "0.0.1",
+  "author": "James Skinner <spiralx@gmail.com> (https://github.com/spiralx)",
   "license": "MIT",
+  "homepage": "https://github.com/spiralx/yieldify-demo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spiralx/yieldify-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spiralx/yieldify-demo/issues"
+  },
   "scripts": {
     "clean": "rimraf node_modules doc dist && npm cache clean",
     "clean-install": "npm run clean && npm install",

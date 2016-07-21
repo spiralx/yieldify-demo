@@ -16,7 +16,7 @@ describe('Ball tests', () => {
     let ball: Ball = new Ball(new Point(0, 0.5), new Velocity(0.1, 0.1), 0.1);
     ball.accelerate(0.25);
 
-    expect(ball.velocity.dy).toBeCloseTo(0.0375);
+    expect(ball.velocity.dy).toBeCloseTo(0.0375, 2);
   });
 
   it('move() should work', () => {
