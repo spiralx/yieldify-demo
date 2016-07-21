@@ -10,7 +10,6 @@ export class Point {
 
   /* Update the position by the given deltas. */
   public move(dx: number, dy: number) {
-    // console.log(distance, angle, dx, dy);
     this.x += dx;
     this.y += dy;
   }

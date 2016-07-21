@@ -28,14 +28,12 @@ export class Ball {
 
     const dx = fac * this.velocity.dx;
     const dy = fac * this.velocity.dy;
-    // console.log(`dx: ${dx.toFixed(4)}, dy: ${dy.toFixed(4)}, fac: ${fac}, gravity: ${gravity}`);
 
     this.position.move(dx, dy);
   }
 
   /* Draw this ball to the given canvas rendering context. */
   public draw(context: CanvasRenderingContext2D, size: number) {
-    // console.info(`Ball.draw(x: ${this.position.x}, y: ${this.position.y}, col: ${this.colour}, rad: ${this.radius})`);
     context.beginPath();
     context.arc(this.position.x * size, (1 - this.position.y) * size, this.radius * size, 0, 2 * Math.PI, false);
     context.fillStyle = this.colour;
